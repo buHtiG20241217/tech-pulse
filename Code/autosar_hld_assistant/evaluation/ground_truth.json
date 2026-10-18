@@ -1,0 +1,26 @@
+{
+  "vbcs_brake_system_hld.pdf": {
+    "_source": "VBCHLD-001 rev 1.0, Table 49 (Architecture summary), page 24",
+    "swcs": ["BrakeControlSWC", "WheelSpeedSensorSWC", "BrakePressureSensorSWC", "BrakeActuatorSWC",
+             "VehicleStateManagerSWC", "DiagnosticManagerSWC"],
+    "interfaces": ["WheelSpeedIf", "BrakePressureIf", "BrakeCommandIf", "ABSStatusIf", "VehicleStateIf",
+                   "BrakeTemperatureIf", "DiagStatusIf", "DiagnosticEventIf", "BrakeActuatorServiceIf",
+                   "BrakeControlInfoIf"],
+    "signals": ["WheelSpeed_FL", "WheelSpeed_FR", "WheelSpeed_RL", "WheelSpeed_RR", "BrakePressure", "BrakeCommand",
+                "ABS_Active", "VehicleSpeed", "VehicleMode", "BrakeTemperature", "DegradedModeRequest"],
+    "counts": {"ports": 29, "provided_ports": 10, "dependencies": 19, "functional_flows": 8}
+  },
+  "ebc_brake_ecu_hld.pdf": {
+    "_source": "samples/generate_sample_pdf.py, REV_1_2",
+    "swcs": ["WheelSpeedSensor_SWC", "BrakeController_SWC", "ActuatorValves_SWC", "DiagnosticManager_SWC"],
+    "interfaces": ["WheelSpeed_If", "BrakeRequest_If", "ValveControl_If", "DiagnosticReport_If"],
+    "signals": ["FL_WheelSpeed", "FR_WheelSpeed", "RL_WheelSpeed", "RR_WheelSpeed", "BrakePressureCmd",
+                "ABS_ActiveFlag"],
+    "ports": ["WheelSpeedSensor_SWC.P_WheelSpeed", "BrakeController_SWC.R_WheelSpeed",
+              "BrakeController_SWC.P_BrakeRequest", "ActuatorValves_SWC.R_BrakeRequest",
+              "BrakeController_SWC.P_ValveCmd", "ActuatorValves_SWC.R_ValveCmd"],
+    "dependencies": ["WheelSpeedSensor_SWC -> BrakeController_SWC", "BrakeController_SWC -> ActuatorValves_SWC",
+                     "BrakeController_SWC -> DiagnosticManager_SWC"],
+    "counts": {"functional_flows": 1}
+  }
+}

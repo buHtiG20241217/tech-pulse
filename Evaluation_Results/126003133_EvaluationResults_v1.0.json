@@ -1,0 +1,647 @@
+{
+  "run_at": "2026-10-13 14:40 UTC",
+  "extraction": {
+    "vbcs_brake_system_hld.pdf": {
+      "swcs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positives": 6,
+        "predicted": 6,
+        "expected": 6,
+        "missing": [],
+        "unexpected": []
+      },
+      "interfaces": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positives": 10,
+        "predicted": 10,
+        "expected": 10,
+        "missing": [],
+        "unexpected": []
+      },
+      "signals": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positives": 11,
+        "predicted": 11,
+        "expected": 11,
+        "missing": [],
+        "unexpected": []
+      },
+      "counts": {
+        "ports": {
+          "expected": 29,
+          "extracted": 29,
+          "match": true
+        },
+        "provided_ports": {
+          "expected": 10,
+          "extracted": 10,
+          "match": true
+        },
+        "dependencies": {
+          "expected": 19,
+          "extracted": 19,
+          "match": true
+        },
+        "functional_flows": {
+          "expected": 8,
+          "extracted": 8,
+          "match": true
+        }
+      }
+    },
+    "ebc_brake_ecu_hld.pdf": {
+      "swcs": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positives": 4,
+        "predicted": 4,
+        "expected": 4,
+        "missing": [],
+        "unexpected": []
+      },
+      "interfaces": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positives": 4,
+        "predicted": 4,
+        "expected": 4,
+        "missing": [],
+        "unexpected": []
+      },
+      "signals": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positives": 6,
+        "predicted": 6,
+        "expected": 6,
+        "missing": [],
+        "unexpected": []
+      },
+      "ports": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positives": 6,
+        "predicted": 6,
+        "expected": 6,
+        "missing": [],
+        "unexpected": []
+      },
+      "dependencies": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "true_positives": 3,
+        "predicted": 3,
+        "expected": 3,
+        "missing": [],
+        "unexpected": []
+      },
+      "counts": {
+        "functional_flows": {
+          "expected": 1,
+          "extracted": 1,
+          "match": true
+        }
+      }
+    }
+  },
+  "retrieval": {
+    "threshold": 1.1,
+    "questions": [
+      {
+        "id": "Q01",
+        "question": "Which software components are defined in the brake control system?",
+        "answerable": true,
+        "best_distance": 0.679,
+        "top_source": "vbcs_brake_system_hld.pdf p5 1.3 Definitions and Abbreviations",
+        "passes_gate": true
+      },
+      {
+        "id": "Q02",
+        "question": "Which ports does BrakeControlSWC provide?",
+        "answerable": true,
+        "best_distance": 0.508,
+        "top_source": "vbcs_brake_system_hld.pdf p8 3.2 BrakeControlSWC",
+        "passes_gate": true
+      },
+      {
+        "id": "Q03",
+        "question": "Which signals are carried by WheelSpeedIf?",
+        "answerable": true,
+        "best_distance": 0.775,
+        "top_source": "vbcs_brake_system_hld.pdf p15 6.2 Signal Definitions",
+        "passes_gate": true
+      },
+      {
+        "id": "Q04",
+        "question": "What is the chain for functional flow FF-02?",
+        "answerable": true,
+        "best_distance": 0.946,
+        "top_source": "vbcs_brake_system_hld.pdf p18 8.2 FF-01 Primary Braking Flow",
+        "passes_gate": true
+      },
+      {
+        "id": "Q05",
+        "question": "What does BrakeControlSWC do in degraded mode?",
+        "answerable": true,
+        "best_distance": 0.721,
+        "top_source": "vbcs_brake_system_hld.pdf p24 12.1 Summary of Architecture Elements",
+        "passes_gate": true
+      },
+      {
+        "id": "Q06",
+        "question": "On which ECU is DiagnosticManagerSWC deployed?",
+        "answerable": true,
+        "best_distance": 0.882,
+        "top_source": "vbcs_brake_system_hld.pdf p6 2.2 ECU Deployment",
+        "passes_gate": true
+      },
+      {
+        "id": "Q07",
+        "question": "Which interfaces are Client-Server interfaces?",
+        "answerable": true,
+        "best_distance": 1.046,
+        "top_source": "vbcs_brake_system_hld.pdf p8 3.2 BrakeControlSWC",
+        "passes_gate": true
+      },
+      {
+        "id": "Q08",
+        "question": "Which CAN message broadcasts ABS_Active?",
+        "answerable": true,
+        "best_distance": 0.929,
+        "top_source": "vbcs_brake_system_hld.pdf p15 6.2 Signal Definitions",
+        "passes_gate": true
+      },
+      {
+        "id": "Q09",
+        "question": "When does DiagnosticManagerSWC run the actuator self-test?",
+        "answerable": true,
+        "best_distance": 0.654,
+        "top_source": "vbcs_brake_system_hld.pdf p23 10.4 Diagnostic Self-Test",
+        "passes_gate": true
+      },
+      {
+        "id": "Q10",
+        "question": "Which port does ActuatorValves_SWC use to receive the valve command?",
+        "answerable": true,
+        "best_distance": 0.898,
+        "top_source": "ebc_brake_ecu_hld.pdf p1 3 AUTOSAR Interfaces & Port Definitions",
+        "passes_gate": true
+      },
+      {
+        "id": "Q11",
+        "question": "What data type and unit does BrakePressureCmd have in the EBC design?",
+        "answerable": true,
+        "best_distance": 0.84,
+        "top_source": "ebc_brake_ecu_hld.pdf p1 1 System Overview & Architecture Goals",
+        "passes_gate": true
+      },
+      {
+        "id": "N01",
+        "question": "What is the vehicle battery warranty replacement procedure?",
+        "answerable": false,
+        "best_distance": 1.63,
+        "top_source": "vbcs_brake_system_hld.pdf p11 3.7 DiagnosticManagerSWC",
+        "passes_gate": false
+      },
+      {
+        "id": "N02",
+        "question": "What is the capital of France?",
+        "answerable": false,
+        "best_distance": 1.847,
+        "top_source": "vbcs_brake_system_hld.pdf p17 7.3 Signal Layout",
+        "passes_gate": false
+      },
+      {
+        "id": "N03",
+        "question": "How do I bake sourdough bread?",
+        "answerable": false,
+        "best_distance": 1.578,
+        "top_source": "vbcs_brake_system_hld.pdf p17 7.3 Signal Layout",
+        "passes_gate": false
+      },
+      {
+        "id": "N04",
+        "question": "How do I sort a list in Python?",
+        "answerable": false,
+        "best_distance": 1.989,
+        "top_source": "vbcs_brake_system_hld.pdf p18 8.1 Flow Overview",
+        "passes_gate": false
+      },
+      {
+        "id": "N05",
+        "question": "Which ASIL is assigned to BrakeControlSWC?",
+        "answerable": false,
+        "best_distance": 0.514,
+        "top_source": "vbcs_brake_system_hld.pdf p8 3.2 BrakeControlSWC",
+        "passes_gate": true
+      },
+      {
+        "id": "N06",
+        "question": "What is the tyre pressure warning threshold?",
+        "answerable": false,
+        "best_distance": 1.156,
+        "top_source": "vbcs_brake_system_hld.pdf p22 10.2 Diagnostic Events",
+        "passes_gate": false
+      }
+    ],
+    "answerable_passing_gate": "11/11",
+    "unanswerable_blocked_by_gate": "5/6",
+    "max_answerable_distance": 1.046,
+    "min_unanswerable_distance": 0.514,
+    "threshold_sweep": [
+      {
+        "threshold": 1.0,
+        "answerable_passed": 10,
+        "unanswerable_blocked": 5
+      },
+      {
+        "threshold": 1.05,
+        "answerable_passed": 11,
+        "unanswerable_blocked": 5
+      },
+      {
+        "threshold": 1.1,
+        "answerable_passed": 11,
+        "unanswerable_blocked": 5
+      },
+      {
+        "threshold": 1.15,
+        "answerable_passed": 11,
+        "unanswerable_blocked": 5
+      },
+      {
+        "threshold": 1.2,
+        "answerable_passed": 11,
+        "unanswerable_blocked": 4
+      },
+      {
+        "threshold": 1.25,
+        "answerable_passed": 11,
+        "unanswerable_blocked": 4
+      },
+      {
+        "threshold": 1.3,
+        "answerable_passed": 11,
+        "unanswerable_blocked": 4
+      },
+      {
+        "threshold": 1.35,
+        "answerable_passed": 11,
+        "unanswerable_blocked": 4
+      },
+      {
+        "threshold": 1.4,
+        "answerable_passed": 11,
+        "unanswerable_blocked": 4
+      },
+      {
+        "threshold": 1.45,
+        "answerable_passed": 11,
+        "unanswerable_blocked": 4
+      },
+      {
+        "threshold": 1.5,
+        "answerable_passed": 11,
+        "unanswerable_blocked": 4
+      },
+      {
+        "threshold": 1.55,
+        "answerable_passed": 11,
+        "unanswerable_blocked": 4
+      },
+      {
+        "threshold": 1.6,
+        "answerable_passed": 11,
+        "unanswerable_blocked": 3
+      }
+    ]
+  },
+  "consistency": {
+    "vbcs_brake_system_hld.pdf": [],
+    "ebc_brake_ecu_hld.pdf": [
+      {
+        "severity": "Warning",
+        "check": "Dependency not backed by ports",
+        "element": "BrakeController_SWC -> DiagnosticManager_SWC",
+        "message": "No matching provided/required port pair on DiagnosticReport_If."
+      },
+      {
+        "severity": "Warning",
+        "check": "SW-C without ports",
+        "element": "DiagnosticManager_SWC",
+        "message": "No port of this SW-C is listed in the port table."
+      }
+    ],
+    "ebc_brake_ecu_hld_v1_3.pdf": [
+      {
+        "severity": "Error",
+        "check": "Missing provider",
+        "element": "VehicleSpeed_If",
+        "message": "Required by HillHoldAssist_SWC, but no SW-C provides it."
+      },
+      {
+        "severity": "Error",
+        "check": "Undefined SW-C",
+        "element": "BrakeController_SWC -> ParkBrake_SWC",
+        "message": "ParkBrake_SWC is not defined as a SW-C."
+      },
+      {
+        "severity": "Warning",
+        "check": "Dependency not backed by ports",
+        "element": "BrakeController_SWC -> DiagnosticManager_SWC",
+        "message": "No matching provided/required port pair on DiagnosticReport_If."
+      },
+      {
+        "severity": "Warning",
+        "check": "Dependency not backed by ports",
+        "element": "BrakeController_SWC -> ParkBrake_SWC",
+        "message": "No matching provided/required port pair on ParkBrake_If."
+      },
+      {
+        "severity": "Warning",
+        "check": "SW-C without ports",
+        "element": "DiagnosticManager_SWC",
+        "message": "No port of this SW-C is listed in the port table."
+      },
+      {
+        "severity": "Warning",
+        "check": "Unused interface",
+        "element": "BrakeRequest_If",
+        "message": "Provided by BrakeController_SWC, but no SW-C requires it."
+      }
+    ]
+  },
+  "comparison": {
+    "swcs": {
+      "added": [
+        "HillHoldAssist_SWC"
+      ],
+      "removed": [],
+      "changed": []
+    },
+    "interfaces": {
+      "added": [
+        "ParkBrake_If",
+        "VehicleSpeed_If"
+      ],
+      "removed": [],
+      "changed": []
+    },
+    "ports": {
+      "added": [
+        "HillHoldAssist_SWC.R_VehicleSpeed"
+      ],
+      "removed": [
+        "ActuatorValves_SWC.R_BrakeRequest"
+      ],
+      "changed": []
+    },
+    "signals": {
+      "added": [
+        "VehicleSpeed"
+      ],
+      "removed": [],
+      "changed": [
+        {
+          "element": "BrakePressureCmd",
+          "field": "data_type",
+          "old": "uint16",
+          "new": "float32"
+        },
+        {
+          "element": "BrakePressureCmd",
+          "field": "unit",
+          "old": "kPa",
+          "new": "bar"
+        }
+      ]
+    },
+    "dependencies": {
+      "added": [
+        "BrakeController_SWC -> ParkBrake_SWC -> ParkBrake_If"
+      ],
+      "removed": [],
+      "changed": []
+    },
+    "functional_flows": {
+      "added": [],
+      "removed": [],
+      "changed": []
+    }
+  },
+  "answers": {
+    "model": "Mistral \u00b7 ministral-8b-latest",
+    "answerable_correct": "10/11",
+    "unanswerable_refused": "6/6",
+    "answers_with_citation": "10/10",
+    "questions": [
+      {
+        "id": "Q01",
+        "question": "Which software components are defined in the brake control system?",
+        "answerable": true,
+        "status": "answered",
+        "confidence": "High",
+        "has_inline_citation": true,
+        "expected_terms_found": "3/3",
+        "correct": true,
+        "seconds": 2.52,
+        "answer": "The following software components (SW-Cs) are defined in the brake control system:\n\n- **BrakeControlSWC** [Doc: vbcs_brake_system_hld.pdf, Page: 5, Section: 1.2 Scope]\n- **WheelSpeedSensorSWC** [Doc: vbcs_brake_system_hld.pdf, Page: 5, Section: 1.2 Scope]\n- **BrakePressureSensorSWC** [Doc: vbcs_brake_system_hld.pdf, Page: 5, Section: 1.2 Scope]\n- **BrakeActuatorSWC** [Doc: vbcs_brake_system_hld.pdf, Page: 5, Section: 1.2 Scope]\n- **VehicleStateManagerSWC** [Doc: vbcs_brake_system_hld.pdf, Page: 5, Section: 1.3 Definitions and Abbreviations]\n- **DiagnosticManagerSWC** [Doc: vbcs_brake_system_hld.pdf, Page: 5, Section: 1.3 Definitions and Abbreviations]"
+      },
+      {
+        "id": "Q02",
+        "question": "Which ports does BrakeControlSWC provide?",
+        "answerable": true,
+        "status": "answered",
+        "confidence": "High",
+        "has_inline_citation": true,
+        "expected_terms_found": "2/2",
+        "correct": true,
+        "seconds": 1.27,
+        "answer": "The **provided ports** of **BrakeControlSWC** are:\n\n- **PP_BrakeCommand** (Sender, interface **BrakeCommandIf**)\n- **PP_ABSStatus** (Sender, interface **ABSStatusIf**)\n- **PP_BrakeControlInfo** (Server, interface **BrakeControlInfoIf**)\n\n[Doc: vbcs_brake_system_hld.pdf, Page: 8, Section: 3.2 BrakeControlSWC]"
+      },
+      {
+        "id": "Q03",
+        "question": "Which signals are carried by WheelSpeedIf?",
+        "answerable": true,
+        "status": "answered",
+        "confidence": "Medium",
+        "has_inline_citation": true,
+        "expected_terms_found": "2/2",
+        "correct": true,
+        "seconds": 1.17,
+        "answer": "The `WheelSpeedIf` interface carries the following signals:\n\n- **WheelSpeed_FL** (float32, km/h)\n- **WheelSpeed_FR** (float32, km/h)\n- **WheelSpeed_RL** (float32, km/h)\n- **WheelSpeed_RR** (float32, km/h)\n\n[Doc: vbcs_brake_system_hld.pdf, Page: 15, Section: 6.3]"
+      },
+      {
+        "id": "Q04",
+        "question": "What is the chain for functional flow FF-02?",
+        "answerable": true,
+        "status": "answered",
+        "confidence": "Medium",
+        "has_inline_citation": true,
+        "expected_terms_found": "2/2",
+        "correct": true,
+        "seconds": 1.07,
+        "answer": "The chain for functional flow **FF-02** is:\n\n**WheelSpeedSensorSWC \u2192 BrakeControlSWC \u2192 BrakeActuatorSWC**\n[Doc: vbcs_brake_system_hld.pdf, Page: 18, Section: 8.2] (FF-02 description)\n[Doc: vbcs_brake_system_hld.pdf, Page: 18, Section: 8.1] (Flow Overview Table 34)"
+      },
+      {
+        "id": "Q05",
+        "question": "What does BrakeControlSWC do in degraded mode?",
+        "answerable": true,
+        "status": "answered",
+        "confidence": "High",
+        "has_inline_citation": true,
+        "expected_terms_found": "2/2",
+        "correct": true,
+        "seconds": 1.67,
+        "answer": "In degraded mode, **BrakeControlSWC** performs the following actions:\n\n- **Limits** `BrakeCommand` to **80%** of normal operation.\n- **Calls** `SetActuatorPressureLimit` on `BrakeActuatorSWC` with a **pressure limit of 120 bar** (reduced from the default 200 bar).\n- **Disables ABS** only if **wheel speed signals are invalid** (otherwise, ABS remains active).\n- **Exits degraded mode** when `DegradedModeRequest` returns to **FALSE**, restoring the default pressure limit of **200 bar**.\n\n[Doc: vbcs_brake_system_hld.pdf, Page: 24, Section: 12.1]\n[Doc: vbcs_brake_system_hld.pdf, Page: 6, Section: 2.3]"
+      },
+      {
+        "id": "Q06",
+        "question": "On which ECU is DiagnosticManagerSWC deployed?",
+        "answerable": true,
+        "status": "answered",
+        "confidence": "Medium",
+        "has_inline_citation": true,
+        "expected_terms_found": "1/1",
+        "correct": true,
+        "seconds": 1.81,
+        "answer": "The **DiagnosticManagerSWC** is deployed on the **Brake Control Unit (BCU)**.\n\n[Doc: vbcs_brake_system_hld.pdf, Page: 6, Section: 2.2 ECU Deployment]\n[Doc: vbcs_brake_system_hld.pdf, Page: 11, Section: 3.7 DiagnosticManagerSWC]\n[Doc: vbcs_brake_system_hld.pdf, Page: 11, Section: 3.7 DiagnosticManagerSWC]"
+      },
+      {
+        "id": "Q07",
+        "question": "Which interfaces are Client-Server interfaces?",
+        "answerable": true,
+        "status": "answered",
+        "confidence": "Low",
+        "has_inline_citation": true,
+        "expected_terms_found": "3/3",
+        "correct": true,
+        "seconds": 1.04,
+        "answer": "The Client-Server interfaces are:\n\n- **DiagnosticEventIf** [Doc: vbcs_brake_system_hld.pdf, Page: 13, Section: 5.1]\n- **BrakeActuatorServiceIf** [Doc: vbcs_brake_system_hld.pdf, Page: 13, Section: 5.1]\n- **BrakeControlInfoIf** [Doc: vbcs_brake_system_hld.pdf, Page: 13, Section: 5.1]"
+      },
+      {
+        "id": "Q08",
+        "question": "Which CAN message broadcasts ABS_Active?",
+        "answerable": true,
+        "status": "answered",
+        "confidence": "Medium",
+        "has_inline_citation": true,
+        "expected_terms_found": "1/1",
+        "correct": true,
+        "seconds": 1.1,
+        "answer": "The CAN message that broadcasts **ABS_Active** is:\n\n- **ABS_STATUS_01 (CAN ID: 0x2B0)**\n  [Doc: vbcs_brake_system_hld.pdf, Page: 15, Section: 6.2]\n  [Doc: vbcs_brake_system_hld.pdf, Page: 16, Section: 7.2]"
+      },
+      {
+        "id": "Q09",
+        "question": "When does DiagnosticManagerSWC run the actuator self-test?",
+        "answerable": true,
+        "status": "answered",
+        "confidence": "High",
+        "has_inline_citation": true,
+        "expected_terms_found": "2/2",
+        "correct": true,
+        "seconds": 1.06,
+        "answer": "The **DiagnosticManagerSWC** runs the actuator self-test on **BrakeActuatorSWC** when:\n\n- **VehicleMode equals `VEH_MODE_STANDBY`** [Doc: vbcs_brake_system_hld.pdf, Page: 23, Section: 10.4]\n- Triggered via **RunActuatorSelfTest** on **BrakeActuatorServiceIf** [Doc: vbcs_brake_system_hld.pdf, Page: 11, Section: 3.7, Responsibility 5]."
+      },
+      {
+        "id": "Q10",
+        "question": "Which port does ActuatorValves_SWC use to receive the valve command?",
+        "answerable": true,
+        "status": "answered",
+        "confidence": "Medium",
+        "has_inline_citation": true,
+        "expected_terms_found": "1/1",
+        "correct": true,
+        "seconds": 0.92,
+        "answer": "ActuatorValves_SWC uses the port **R_ValveCmd** to receive the valve command.\n\n[Doc: ebc_brake_ecu_hld.pdf, Page: 1, Section: 3]\n[Doc: ebc_brake_ecu_hld.pdf, Page: 1, Section: 3]"
+      },
+      {
+        "id": "Q11",
+        "question": "What data type and unit does BrakePressureCmd have in the EBC design?",
+        "answerable": true,
+        "status": "model_declined",
+        "confidence": "Medium",
+        "has_inline_citation": false,
+        "expected_terms_found": "0/2",
+        "correct": false,
+        "seconds": 0.58,
+        "answer": "The provided AUTOSAR HLD documents do not contain sufficient evidence to answer this question."
+      },
+      {
+        "id": "N01",
+        "question": "What is the vehicle battery warranty replacement procedure?",
+        "answerable": false,
+        "status": "no_evidence",
+        "confidence": "None",
+        "has_inline_citation": false,
+        "expected_terms_found": "0/0",
+        "correct": true,
+        "seconds": 0.01,
+        "answer": "The provided AUTOSAR HLD documents do not contain sufficient evidence to answer this question."
+      },
+      {
+        "id": "N02",
+        "question": "What is the capital of France?",
+        "answerable": false,
+        "status": "no_evidence",
+        "confidence": "None",
+        "has_inline_citation": false,
+        "expected_terms_found": "0/0",
+        "correct": true,
+        "seconds": 0.01,
+        "answer": "The provided AUTOSAR HLD documents do not contain sufficient evidence to answer this question."
+      },
+      {
+        "id": "N03",
+        "question": "How do I bake sourdough bread?",
+        "answerable": false,
+        "status": "no_evidence",
+        "confidence": "None",
+        "has_inline_citation": false,
+        "expected_terms_found": "0/0",
+        "correct": true,
+        "seconds": 0.01,
+        "answer": "The provided AUTOSAR HLD documents do not contain sufficient evidence to answer this question."
+      },
+      {
+        "id": "N04",
+        "question": "How do I sort a list in Python?",
+        "answerable": false,
+        "status": "no_evidence",
+        "confidence": "None",
+        "has_inline_citation": false,
+        "expected_terms_found": "0/0",
+        "correct": true,
+        "seconds": 0.01,
+        "answer": "The provided AUTOSAR HLD documents do not contain sufficient evidence to answer this question."
+      },
+      {
+        "id": "N05",
+        "question": "Which ASIL is assigned to BrakeControlSWC?",
+        "answerable": false,
+        "status": "model_declined",
+        "confidence": "High",
+        "has_inline_citation": false,
+        "expected_terms_found": "0/0",
+        "correct": true,
+        "seconds": 0.6,
+        "answer": "The provided AUTOSAR HLD documents do not contain sufficient evidence to answer this question."
+      },
+      {
+        "id": "N06",
+        "question": "What is the tyre pressure warning threshold?",
+        "answerable": false,
+        "status": "no_evidence",
+        "confidence": "None",
+        "has_inline_citation": false,
+        "expected_terms_found": "0/0",
+        "correct": true,
+        "seconds": 0.01,
+        "answer": "The provided AUTOSAR HLD documents do not contain sufficient evidence to answer this question."
+      }
+    ]
+  }
+}

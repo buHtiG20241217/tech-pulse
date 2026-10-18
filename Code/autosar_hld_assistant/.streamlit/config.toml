@@ -1,0 +1,26 @@
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+
+[server]
+maxUploadSize = 50
+
+[theme]
+baseRadius = "0.5rem"
+showWidgetBorder = true
+
+[theme.light]
+primaryColor = "#1F5FBF"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F3F5F8"
+textColor = "#1B2430"
+borderColor = "#DCE1E8"
+
+[theme.dark]
+primaryColor = "#6EA8FE"
+backgroundColor = "#11151B"
+secondaryBackgroundColor = "#1A2029"
+textColor = "#E4E8EE"
+borderColor = "#2C3440"
